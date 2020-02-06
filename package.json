@@ -1,0 +1,19 @@
+{
+  "name": "sap-capm-cv-backoffice",
+  "version": "1.0.0",
+  "description": "Sample application developed in Node.js for exposing resumée information with CAPM",
+  "repository": "https://github.com/rayatus/sap-capm-cv-backoffice.git",
+  "author": "Jorge Sancho Royo",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/cds": "^3",
+    "express": "^4"
+  },
+  "scripts": {
+    "start": "npx cds run"
+  },
+  "devDependencies": {
+    "passport": "^0.4.1",
+    "sqlite3": "^4.1.1"
+  }
+}

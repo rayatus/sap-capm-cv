@@ -1,0 +1,20 @@
+{
+    "build": {
+        "target": ".",
+        "tasks": []
+    },
+    "_auth": {
+        "passport": {
+            "strategy": "mock",
+            "users": {
+                "alice": {
+                   "roles": ["admin", "authenticated-user"]
+                },
+                "bob": {
+                    "ID": "bob@builder.com",
+                    "roles": ["authenticated-user"]
+                }
+            }
+        }
+    }
+}

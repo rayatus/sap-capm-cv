@@ -1,0 +1,12 @@
+using {com.jsancho.sap.capm.cv as my} from '../db/schema';
+
+service CatalogService @(
+    path     : '/browse', //By default service is created by using the NAME of the service and deleting 'Service' word. This annotation changes this name
+    requires : 'authenticated-user' //annotation which makes mandatory to be logged in
+) {
+    @readonly
+    entity Persons as projection on my.Persons;
+
+    @readonly
+    entity Emails  as projection on my.Emails;
+}
