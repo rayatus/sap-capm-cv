@@ -34,52 +34,64 @@ type Period {
 }
 
 entity Persons : managed, cuid {
-    fullName                : String(200);
-    birthDate               : Date;
-    nationality             : localized String(80);
-    residence               : localized String(100);
-    phone                   : String(80);
-    gender                  : Gender;
-    eMails                  : Composition of many Emails
-                                  on eMails.person = $self;
-    professionalExperiences : Association to many ProfessionalExperiences
-                                  on professionalExperiences.person = $self;
-    languages               : Association to many Languages
-                                  on languages.person = $self;
-    webPages                : Association to many WebPages
-                                  on webPages.person = $self;
+    fullName    : String(200);
+    birthDate   : Date;
+    nationality : localized String(80);
+    residence   : localized String(100);
+    phone       : String(80);
+    gender      : Gender;
+    resumees    : Composition of many Resumees
+                      on resumees.person = $self;
+}
+
+entity Resumees : managed, cuid {
+    title             : String(80);
+    person            : Association to Persons;
+    introduction      : String(1000);
+    summaryExperience : String(1000);
+    summaryKeySkills  : String(1000);
+    eMails            : Composition of many Emails
+                            on eMails.resumee = $self;
+    companies         : Composition of many Companies
+                            on companies.resumee = $self;
+    languages         : Composition of many Languages
+                            on languages.resumee = $self;
+    webPages          : Composition of many WebPages
+                            on webPages.resumee = $self;
+    education         : Composition of many Education
+                            on education.resumee = $self;
 }
 
 entity Emails : managed, cuid {
-    eMail  : String(200);
-    person : Association to Persons;
+    resumee : Association to Resumees;
+    eMail   : String(200);
 }
 
 entity Languages : managed, cuid {
-    person      : Association to Persons;
+    resumee     : Association to Resumees;
     language    : localized String(50);
     spokenLevel : LanguageLevel;
     writenLevel : LanguageLevel;
 }
 
-entity ProfessionalExperiences : managed, cuid {
-    person    : Association to Persons;
+entity Companies : managed, cuid {
+    resumee   : Association to Resumees;
     period    : Period;
-    company   : String(200);
+    name      : String(200);
     jobTitle  : String(100);
     project   : String(1000);
     functions : String(1000);
 }
 
 entity Education : managed, cuid {
-    person : Association to Persons;
-    period : Period;
-    name   : String(100);
-    type   : EducationType;
+    resumee : Association to Resumees;
+    period  : Period;
+    name    : String(100);
+    type    : EducationType;
 }
 
 entity WebPages : managed, cuid {
-    person : Association to Persons;
-    name   : String(50);
-    url    : Url;
+    resumee : Association to Resumees;
+    name    : String(50);
+    url     : Url;
 }
