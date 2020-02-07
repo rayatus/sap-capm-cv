@@ -1,25 +1,30 @@
-# Getting Started
+# CV browser
 
-Welcome to your new project.
+This application has been developed with SAP CAPM Node.js flavour as a learning project, it's purpose
+is just to enter owns resumée information for displaying it.
 
-It contains these folders and files, following our recommended project layout:
+As recommended it contains following folder structure:
 
 File / Folder | Purpose
 ---------|----------
-`app/` | content for UI frontends go here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+`app/` | UI content
+`db/` | Domain models
+`srv/` |Service models and business rules
+`package.json` | Project metadata and configuration
 
 
 ## Next Steps...
 
-- Open a new terminal and run  `cds watch`
-- ( in VSCode simply choose _**Terminal** > Run Task > cds watch_ )
-- Start adding content, e.g. a [db/schema.cds](db/schema.cds), ...
+Regarding frontend layer, there will be two different tecnologies involved:
+
+- **SAP Fiori Elements** for administration functionality such as creating new resumée or updating existing one.
+- Angular JS, or React or Vue while using WebComponents for that part which will allow to browse the data base.
+
+According to DataBase, it will be deployed in Google's FireBase or any other free DB available on Internet so that
+there will be no need of SAP trial's which normaly have only a limited period of availability. We'll see ;-) 
 
 
-## Learn more...
+
+## Learn more about SAP CAPM...
 
 Learn more at https://cap.cloud.sap/docs/get-started/
