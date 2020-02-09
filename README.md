@@ -7,9 +7,9 @@ As recommended it contains following folder structure:
 
 File / Folder | Purpose
 ---------|----------
-`app/` | UI content
 `db/` | Domain models
 `srv/` |Service models and business rules
+`doc/MySQLWB - DB Model.mwb`| Graphical documentation regarding the data model (a [MySQL Workbench](https://www.mysql.com/products/workbench/) file)
 `package.json` | Project metadata and configuration
 
 
@@ -18,10 +18,10 @@ File / Folder | Purpose
 Regarding frontend layer, there will be two different tecnologies involved:
 
 - **SAP Fiori Elements** for administration functionality such as creating new resumée or updating existing one.
-- Angular JS, or React or Vue while using WebComponents for that part which will allow to browse the data base.
+- **Angular JS**, or **React** or **Vue** while using **WebComponents** for that part which will allow to browse the data base.
 
 According to DataBase, it will be deployed in Google's FireBase or any other free DB available on Internet so that
-there will be no need of SAP trial's which normaly have only a limited period of availability. We'll see ;-) 
+there will be no need of SAP trial's which normaly have only a limited period of availability. **We'll see** :wink:
 
 
 

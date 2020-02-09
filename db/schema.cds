@@ -4,6 +4,7 @@ namespace com.jsancho.sap.capm.cv;
 //> managed - ads fields such as CreatedBy, CreatedOn, ModifiedBy, ModifiedOn...
 
 using {
+    Country,
     managed,
     cuid
 } from '@sap/cds/common';
@@ -36,8 +37,8 @@ type Period {
 entity Persons : managed, cuid {
     fullName    : String(200);
     birthDate   : Date;
-    nationality : localized String(80);
-    residence   : localized String(100);
+    nationality : Country;
+    residence   : Country;
     phone       : String(80);
     gender      : Gender;
     resumees    : Composition of many Resumees
@@ -71,7 +72,7 @@ entity Languages : managed, cuid {
     resumee     : Association to Resumees;
     language    : localized String(50);
     spokenLevel : LanguageLevel;
-    writenLevel : LanguageLevel;
+    writtenLevel : LanguageLevel;
 }
 
 entity Companies : managed, cuid {
