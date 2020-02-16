@@ -1,0 +1,38 @@
+{
+    "sap.app": {
+        "id": "persons",
+        "title": "New Person",
+        "dataSources": {
+            "Admin": {
+                "uri": "/admin/",
+                "settings": {
+                    "odataVersion": "4.0"
+                }
+            }
+        }
+    },
+    "sap.ui5": {
+        "dependencies": { "libs": { "sap.fe": {} } },
+        "models": {
+            "": {
+                "dataSource": "Admin",
+                "settings": { "synchronizationMode": "None" }
+            }
+        },
+        "routing": {
+            "routes": [
+                {
+                    "pattern": "",
+                    "name": "PersonsList",
+                    "target": "PersonsList"
+                }
+            ],
+            "targets": {
+                "PersonsList": {
+                    "entitySet": "Persons",
+                    "viewName": "sap.fe.templates.ListReport"
+                }
+            }
+        }
+    }
+}

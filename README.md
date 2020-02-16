@@ -7,6 +7,7 @@ As recommended it contains following folder structure:
 
 File / Folder | Purpose
 ---------|----------
+`app/` | All frontend files regarding administration app
 `db/` | Domain models
 `srv/` |Service models and business rules
 `doc/MySQLWB - DB Model.mwb`| Graphical documentation regarding the data model (a [MySQL Workbench](https://www.mysql.com/products/workbench/) file)
