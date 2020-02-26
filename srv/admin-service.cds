@@ -1,11 +1,12 @@
-using {com.jsancho.sap.capm.cv as my} from '../db/schema';
+using com.jsancho.sap.capm.cv as db from '../db/schema';
 
-service AdminService @(requires : 'admin') {
-    entity Persons   as projection on my.Persons;
-    entity Resumees  as projection on my.Resumees;
-    entity Emails    as projection on my.Emails;
-    entity Languages as projection on my.Languages;
-    entity Companies as projection on my.Companies;
-    entity Education as projection on my.Education;
-    entity WebPages  as projection on my.WebPages;
+@(requires:'admin')
+service AdminService {
+    entity Persons   as projection on db.Persons;
+    entity Resumees  as projection on db.Resumees;
+    entity Emails    as projection on db.Emails;
+    entity Languages as projection on db.Languages;
+    entity Companies as projection on db.Companies;
+    entity Education as projection on db.Education;
+    entity WebPages  as projection on db.WebPages;
 }

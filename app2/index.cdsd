@@ -1,0 +1,21 @@
+using com.jsancho.sap.capm.cv as my from '../db/schema';
+
+annotate my.Persons with @(UI : {
+    Identification  : [{Value : fullName}],
+    SelectionFields : [
+        fullName,
+        nationality,
+        birthDate
+    ],
+    HeaderInfo      : {
+        TypeName       : 'Person',
+        TypeNamePlural : 'Persons',
+        Title          : {value : ID},
+        Description    : {value : fullName}
+    },
+    LineItem        : [
+        {Value : fullName},
+        {Value : birthDate},
+        {Value : nationality}
+    ]
+});

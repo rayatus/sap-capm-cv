@@ -1,4 +1,4 @@
-using {com.jsancho.sap.capm.cv as my} from '../db/schema';
+using com.jsancho.sap.capm.cv as my from '../db/schema';
 
 service CatalogService @(
     path     : '/browse', //By default service is created by using the NAME of the service and deleting 'Service' word. This annotation changes this name

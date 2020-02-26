@@ -3,7 +3,7 @@
         "target": ".",
         "tasks": []
     },
-    "_auth": {
+    "_auth": {        
         "passport": {
             "strategy": "mock",
             "users": {
